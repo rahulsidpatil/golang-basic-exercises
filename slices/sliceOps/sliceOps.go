@@ -3,7 +3,6 @@ package main
 import "fmt"
 
 func main() {
-
 	s := make([]string, 3)
 	fmt.Println("emp:", s)
 
@@ -19,9 +18,9 @@ func main() {
 	s = append(s, "e", "f")
 	fmt.Println("apd:", s)
 
-	c := make([]string, len(s))
-	copy(c, s)
-	fmt.Println("cpy:", c)
+	// c := make([]string, len(s))
+	// copy(c, s)
+	// fmt.Println("cpy:", c)
 
 	l := s[2:5]
 	fmt.Println("sl1:", l)
@@ -32,7 +31,7 @@ func main() {
 	l = s[2:]
 	fmt.Println("sl3:", l)
 
-	t := []string{"g", "h", "i"}
-	fmt.Println("dcl:", t)
+	// t := []string{"g", "h", "i"}
+	// fmt.Println("dcl:", t)
 
 }

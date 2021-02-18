@@ -1,40 +1,33 @@
 package main
 
 import (
-	sl "github.com/rahulsidpatil/prettyslice"
+	s "github.com/rahulsidpatil/prettyslice"
 )
 
 func main() {
 
-	s := make([]string, 3)
-	sl.Show("emp:", s)
+	nums := []int{1, 2, 3}
+	s.Show("nums", nums)
 
-	s[0] = "a"
-	s[1] = "b"
-	s[2] = "c"
+	_ = append(nums, 4)
+	s.Show("nums", nums)
 
-	sl.Show("set:", s)
-	sl.Show("get:", s[2])
+	nums = append(nums, 4)
+	s.Show("nums", nums)
 
-	sl.Show("len:", len(s))
+	nums = append(nums, 9)
+	s.Show("nums", nums)
 
-	s = append(s, "d")
-	s = append(s, "e", "f")
-	sl.Show("apd:", s)
+	nums = append(nums, 4)
+	s.Show("nums", nums)
 
-	c := make([]string, len(s))
-	copy(c, s)
-	sl.Show("cpy:", c)
+	// or:
+	// nums = append(nums, 4, 9)
+	// s.Show("nums", nums)
 
-	l := s[2:5]
-	sl.Show("sl1:", l)
+	nums = []int{1, 2, 3}
+	tens := []int{12, 13}
 
-	l = s[:5]
-	sl.Show("sl2:", l)
-
-	l = s[2:]
-	sl.Show("sl3:", l)
-
-	t := []string{"g", "h", "i"}
-	sl.Show("dcl:", t)
+	nums = append(nums, tens...)
+	s.Show("nums", nums)
 }
