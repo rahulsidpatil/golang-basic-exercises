@@ -39,7 +39,7 @@ package main
 //
 // NOTE
 //
-//  You can also use my prettyslice package for printing the slices.
+// You can also use my viewslice package for printing the slices.
 //
 //
 // HINT
