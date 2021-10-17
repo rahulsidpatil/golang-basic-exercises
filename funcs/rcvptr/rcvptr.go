@@ -41,6 +41,19 @@ func appSlc(s []int) {
 	Show("appSlc: s:", s)
 }
 
+func appSlcRef(s *[]int) {
+	// []int{0,0,0,0}
+	*s = append(*s, 1, 2, 3)
+
+	for i, _ := range *s {
+		(*s)[i] = i
+	}
+
+	fmt.Printf("appSlc: &ab:%p; len(ab):%d; cap(ab):%d\n", &ab, len(ab), cap(ab))
+	Show("appSlc: s:", s)
+	// Show("appSlc: ab:", ab)
+}
+
 func addMap(m map[int]string) {
 	m[1] = "first"
 	fmt.Printf("addMap: &m:%p\n", &m)
