@@ -20,6 +20,8 @@ func main() {
 	)
 
 	var store items
-	store = append(store, b, g, p, t)
+	store = append(store, b, &g, p, t)
+
+	store.discount()
 	store.print()
 }
