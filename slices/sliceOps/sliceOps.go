@@ -18,9 +18,9 @@ func main() {
 	s = append(s, "e", "f")
 	fmt.Println("apd:", s)
 
-	// c := make([]string, len(s))
-	// copy(c, s)
-	// fmt.Println("cpy:", c)
+	c := make([]string, len(s))
+	copy(c, s)
+	fmt.Println("cpy:", c)
 
 	l := s[2:5]
 	fmt.Println("sl1:", l)
